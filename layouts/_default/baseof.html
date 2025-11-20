@@ -17,7 +17,8 @@
 <!-- Optional: your custom CSS -->
   <link rel="stylesheet" href="{{ "css/knowvaana.css" | relURL }}">
    <link rel="stylesheet" href="{{ "css/sidebar.css" | relURL }}">
-   <script src="js/sidebars.js"></script>
+   <script src="{{ "js/sidebars.js" | relURL }}"></script>
+
 </head>
 <body class="bg-light">
 
@@ -26,7 +27,8 @@
     <div class="container-fluid">
         <!-- LOGO + BRAND NAME -->
     <a class="navbar-brand d-flex align-items-center gap-2" href="{{ .Site.BaseURL }}">
-      <img src="{{ "/img/KnowwvanaLogo_1.png" | relURL }}"
+      <img src="{{ "img/KnowwvanaLogo_1.png" | relURL }}"
+
            alt="Knowvaana Logo"
            style="height: 32px; width: auto;" class="me-2">
       <span class="fw-bold">{{ .Site.Params.brand }}</span>
@@ -41,7 +43,7 @@
             <a class="nav-link{{ if .IsHome }} active{{ end }}" href="{{ .Site.BaseURL }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ "/docs/" | relURL }}">Docs</a>
+            <a class="nav-link" href="{{ "docs/" | relURL }}">Docs</a>
           </li>
         </ul>
         <span class="navbar-text small text-secondary d-none d-md-inline">
