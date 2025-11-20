@@ -1,0 +1,21 @@
+<div class="flex-shrink-0 p-3 bg-white">
+  <span class="fs-5 fw-semibold d-block pb-2 mb-2 border-bottom">Docs</span>
+
+  <ul class="list-unstyled ps-0">
+    {{- $root := site.GetPage "section" "docs" -}}
+    {{- if $root -}}
+      {{- $current := . -}}
+
+      {{- range $root.Sections.ByTitle -}}
+        {{- partial "sidebar-item.html" (dict "node" . "level" 0 "current" $current) -}}
+      {{- end -}}
+
+      {{- range where $root.Pages "File.BaseFileName" "ne" "_index" -}}
+        {{- partial "sidebar-item.html" (dict "node" . "level" 0 "current" $current) -}}
+      {{- end -}}
+
+    {{- else -}}
+      <li class="text-muted small">No docs yet.</li>
+    {{- end -}}
+  </ul>
+</div>

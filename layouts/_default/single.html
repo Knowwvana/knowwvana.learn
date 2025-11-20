@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article>
+    <header class="mb-3">
+      <h1 class="h2">{{ .Title }}</h1>
+      <p class="text-muted small mb-0">
+        Last updated: {{ .Lastmod.Format "02 Jan 2006" }}
+      </p>
+    </header>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

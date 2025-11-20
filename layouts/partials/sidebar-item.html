@@ -1,0 +1,89 @@
+{{/* 
+  Inputs:
+    .node    -> the current section or page
+    .level   -> nesting level (0, 1, 2...)
+    .current -> the page being viewed now
+*/}}
+
+{{- $node := .node -}}
+{{- $level := .level -}}
+{{- $current := .current -}}
+
+{{- $id := printf "nav-%s" (replace $node.RelPermalink "/" "-" -1) -}}
+
+{{- $isActive := eq $node.RelPermalink $current.RelPermalink -}}
+
+{{- $childSections := $node.Sections -}}
+{{- $childPages := where $node.Pages "File.BaseFileName" "ne" "_index" -}}
+{{- $hasChildren := or (gt (len $childSections) 0) (gt (len $childPages) 0) -}}
+
+{{- $isAncestor := and (not $isActive) (hasPrefix $current.RelPermalink $node.RelPermalink) -}}
+{{- $shouldExpand := or $isActive $isAncestor -}}
+
+<li class="mb-1">
+
+  {{/* ---------------------------- SECTION ---------------------------- */}}
+  {{- if $node.IsSection -}}
+
+    <div class="d-flex align-items-center">
+
+      {{/* Expand/Collapse Button */}}
+      {{- if $hasChildren -}}
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 me-1"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#{{ $id }}"
+                aria-expanded="{{ if $shouldExpand }}true{{ else }}false{{ end }}"
+                style="padding-left: {{ mul $level 12 }}px">
+        </button>
+      {{- else -}}
+        <span style="padding-left: {{ mul $level 12 }}px;" class="me-1"></span>
+      {{- end }}
+
+      {{/* Folder Link */}}
+      <a href="{{ $node.RelPermalink }}"
+         class="d-inline-flex align-items-center text-decoration-none 
+                {{ if $isActive }}active-link{{ else }}link-dark{{ end }}">
+        <i class="bi {{ if $shouldExpand }}bi-folder2-open text-success{{ else }}bi-folder-fill{{ end }} me-2"
+           style="font-size: 1rem;"></i>
+        {{ $node.Title }}
+      </a>
+    </div>
+
+    {{/* Children */}}
+    {{- if $hasChildren -}}
+    <div class="collapse {{ if $shouldExpand }}show{{ end }}" id="{{ $id }}">
+      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
+        {{- range $childSections }}
+          {{- partial "sidebar-item.html" (dict "node" . "level" (add $level 1) "current" $current) -}}
+        {{- end }}
+
+        {{- range $childPages }}
+          {{- partial "sidebar-item.html" (dict "node" . "level" (add $level 1) "current" $current) -}}
+        {{- end }}
+
+      </ul>
+    </div>
+    {{- end }}
+
+  {{/* ---------------------------- FILE ---------------------------- */}}
+  {{- else }}
+
+    <a href="{{ $node.RelPermalink }}"
+       class="d-flex align-items-center text-decoration-none rounded sidebar-file-link 
+              {{ if $isActive }}active-link{{ else }}link-dark{{ end }}"
+       style="padding-left: {{ mul $level 20 }}px;">
+
+      <i class="bi bi-book-fill me-2" style="font-size: 1rem;"></i>
+
+     {{ if $node.Title }}
+        {{ $node.Title }}
+    {{ else }}
+        {{ replace ($node.File.BaseFileName) "-" " " | title }}
+    {{ end }}
+    </a>
+
+  {{- end }}
+
+</li>

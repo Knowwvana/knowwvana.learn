@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Knowwvana Learn'
+[params]
+  brand = "Knowvaana"
+  tagline = "A living wiki of knowledge & experiments"

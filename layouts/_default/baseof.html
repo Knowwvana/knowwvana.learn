@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+<!-- Optional: your custom CSS -->
+  <link rel="stylesheet" href="{{ "css/knowvaana.css" | relURL }}">
+   <link rel="stylesheet" href="{{ "css/sidebar.css" | relURL }}">
+   <script src="js/sidebars.js"></script>
+</head>
+<body class="bg-light">
+
+  <!-- Top navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+        <!-- LOGO + BRAND NAME -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="{{ .Site.BaseURL }}">
+      <img src="{{ "/img/KnowwvanaLogo_1.png" | relURL }}"
+           alt="Knowvaana Logo"
+           style="height: 32px; width: auto;" class="me-2">
+      <span class="fw-bold">{{ .Site.Params.brand }}</span>
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link{{ if .IsHome }} active{{ end }}" href="{{ .Site.BaseURL }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "/docs/" | relURL }}">Docs</a>
+          </li>
+        </ul>
+        <span class="navbar-text small text-secondary d-none d-md-inline">
+          {{ .Site.Params.tagline }}
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main layout: sidebar + content -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+     <aside class="col-md-3 col-lg-2 mb-4">
+    {{ partial "sidebar.html" . }}
+</aside>
+
+
+      <!-- Main content area -->
+      <main class="col-md-9 col-lg-10">
+         {{ partial "hero.html" . }}
+        <div class="card shadow-sm mb-2">
+          <div class="card-body">
+            {{ block "main" . }}{{ end }}
+          </div>
+        </div>
+
+        <footer class="text-center text-muted small py-3">
+          &copy; {{ now.Format "2006" }} Knowvaana • Powered by Hugo &amp; Bootstrap
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle via CDN -->
+  <!-- Bootstrap Script CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+</body>
+</html>

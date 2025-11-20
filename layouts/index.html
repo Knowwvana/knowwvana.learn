@@ -1,0 +1,35 @@
+{{ define "main" }}
+<!-- Home Content Below Hero -->
+<h2 class="h4 fw-semibold mt-4 mb-3">Recently Added Articles</h2>
+<p class="text-muted small mb-4">This will auto-populate once docs are created.</p>
+
+  <h2 class="h4 mt-4">Quick links</h2>
+  <div class="row g-3">
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h3 class="h5 card-title">Getting Started</h3>
+          <p class="card-text small text-muted">
+            How to contribute, folder structure, and writing guidelines.
+          </p>
+          <a href="{{ "/docs/getting-started/" | relURL }}" class="btn btn-sm btn-primary">
+            Read docs
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h3 class="h5 card-title">Architecture Notes</h3>
+          <p class="card-text small text-muted">
+            High-level diagrams, system views, and design decisions.
+          </p>
+          <a href="{{ "/docs/architecture/" | relURL }}" class="btn btn-sm btn-outline-primary">
+            View notes
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

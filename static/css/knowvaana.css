@@ -1,0 +1,49 @@
+/* HERO BACKGROUND */
+.hero-section {
+  background-image: url('/img/Hero_background2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  min-height: 200px;
+  position: relative;
+  border-radius: 1rem;
+  color: white;
+}
+
+/* Optional: dark overlay for readability */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(0,0,0,0.45);
+  border-radius: 1rem;
+}
+
+
+/* ensure content appears above overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Search bar white text contrast */
+.hero-search input {
+  border: none;
+}
+
+.hero-search input::placeholder {
+  color: #d2d2d2;
+}
+
+.folder-card:hover,
+.article-card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+}
+
+.card-title {
+    font-weight: 600;
+}
