@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Knowwvana Learn'
+publishDir = "docs"
 [params]
   brand = "Knowvaana"
   tagline = "A living wiki of knowledge & experiments"
-publishDir = "docs"
