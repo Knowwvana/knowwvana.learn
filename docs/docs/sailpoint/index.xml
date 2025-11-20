@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sailpoint on Knowwvana Learn</title>
-    <link>https://example.org/docs/sailpoint/</link>
+    <link>https://knowwvana.github.io/knowwvana.learn/docs/sailpoint/</link>
     <description>Recent content in Sailpoint on Knowwvana Learn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/docs/sailpoint/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://knowwvana.github.io/knowwvana.learn/docs/sailpoint/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
