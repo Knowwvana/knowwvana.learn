@@ -4,3 +4,4 @@ title = 'Knowwvana Learn'
 [params]
   brand = "Knowvaana"
   tagline = "A living wiki of knowledge & experiments"
+publishDir = "docs"
