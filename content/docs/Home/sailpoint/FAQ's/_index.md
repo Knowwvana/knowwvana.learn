@@ -2,7 +2,6 @@
 title: "FAQ's"
 weight: 1
 layout: "list"
-description: "Desc1"
+description: "This section contains SailPoint FAQ's"
 ---
-
 This section contains SailPoint FAQ's
