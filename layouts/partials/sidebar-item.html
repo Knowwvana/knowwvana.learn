@@ -16,49 +16,70 @@
 
 <li class="mb-1">
 
-  {{- if $node.IsSection -}}
+  {{ if $node.IsSection }}
 
-    <!-- SECTION BUTTON WITH CARET (Bootstrap demo style) -->
-    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0{{ if $shouldExpand }}{{ else }} collapsed{{ end }}"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#{{ $id }}"
-            aria-expanded="{{ if $shouldExpand }}true{{ else }}false{{ end }}"
-            style="padding-left: {{ mul $level 12 }}px;">
-            <!-- FOLDER ICON (open/closed) -->
-  <i class="bi {{ if $shouldExpand }}bi-folder2-open{{ else }}bi-folder-fill{{ end }} text-warning
-    folder-icon me-1" data-folder-icon="{{ $id }}"></i>
-      {{ $node.Title }}
-    </button>
+    <div class="d-flex align-items-center">
 
-    {{- if $hasChildren -}}
-      <div class="collapse {{ if $shouldExpand }}show{{ end }}" id="{{ $id }}">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          {{- range $childSections -}}
-            {{- partial "sidebar-item.html" (dict "node" . "level" (add $level 1) "current" $current) -}}
-          {{- end -}}
+      <!-- CARET BUTTON ONLY -->
+      {{ if $hasChildren }}
+        <button class="btn btn-toggle d-inline-flex align-items-center border-0 p-0 me-1
+                       {{ if not $shouldExpand }}collapsed{{ end }}"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#{{ $id }}"
+                aria-expanded="{{ if $shouldExpand }}true{{ else }}false{{ end }}">
+        </button>
+      {{ else }}
+        <span class="me-3"></span>
+      {{ end }}
 
-          {{- range $childPages -}}
-            {{- partial "sidebar-item.html" (dict "node" . "level" (add $level 1) "current" $current) -}}
-          {{- end -}}
-        </ul>
-      </div>
-    {{- end -}}
+      <!-- FOLDER LINK -->
+      <a href="{{ $node.Permalink }}"
+         class="d-inline-flex align-items-center text-decoration-none 
+                {{ if $isActive }}active-link{{ end }}"
+         style="margin-left: {{ mul $level 12 }}px;">
 
-  {{- else -}}
+        <!-- FOLDER ICON -->
+        <i class="bi {{ if $shouldExpand }}bi-folder2-open{{ else }}bi-folder-fill{{ end }}
+              text-warning me-2 folder-icon"
+           data-folder-icon="{{ $id }}"></i>
 
-    <!-- SIMPLE FILE LINK -->
-    <a href="{{ $node.RelPermalink }}"
-       class="link-dark d-inline-flex text-decoration-none rounded {{ if $isActive }}active-link{{ end }}"
-       style="padding-left: {{ mul $level 12 }}px;">
-       <i class="bi bi-file-earmark-text text-warning me-2"></i>
-      {{ if $node.Title }}
-      {{ $node.Title }}
+        {{ $node.Title }}
+      </a>
+
+    </div>
+
+    {{ if $hasChildren }}
+    <div class="collapse {{ if $shouldExpand }}show{{ end }}" id="{{ $id }}">
+      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+        {{ range $childSections }}
+          {{ partial "sidebar-item.html" (dict "node" . "level" (add $level 1) "current" $current) }}
+        {{ end }}
+
+        {{ range $childPages }}
+          {{ partial "sidebar-item.html" (dict "node" . "level" (add $level 1) "current" $current) }}
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
   {{ else }}
-      {{ replace (replace ($node.File.BaseFileName) "-" " ") "_" " " | title }}
-  {{ end }}
+
+    <!-- FILE LINK -->
+    <a href="{{ $node.Permalink }}"
+       class="link-dark d-inline-flex text-decoration-none
+              {{ if $isActive }}active-link{{ end }}"
+       style="padding-left: {{ mul $level 12 }}px;">
+
+       <i class="bi bi-file-earmark-text text-warning me-2"></i>
+
+       {{ if $node.Title }}
+         {{ $node.Title }}
+       {{ else }}
+         {{ replace (replace ($node.File.BaseFileName) "-" " ") "_" " " | title }}
+       {{ end }}
     </a>
 
-  {{- end -}}
+  {{ end }}
 
 </li>

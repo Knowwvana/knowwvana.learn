@@ -1,75 +1,104 @@
 {{ define "main" }}
 
-<div class="container-fluid">
+<h1 class="mb-4 fw-bold">{{ .Title }}</h1>
 
-  <!-- Section Title -->
-  <div class="card shadow-sm border-0 mb-4">
-    <div class="card-body">
-      <h1 class="display-6 mb-3">{{ .Title }}</h1>
+<!-- Optional Section Description -->
+{{ with .Content }}
+<div class="alert alert-light border mb-4">
+    {{ . }}
+</div>
+{{ end }}
 
-      {{ if .Content }}
-        <div class="text-muted fs-5">
-          {{ .Content }}
-        </div>
-      {{ end }}
-    </div>
-  </div>
+<!-- CATEGORY LIST -->
+{{ $sections := .Sections }}
+{{ if gt (len $sections) 0 }}
+<h4 class="mt-4 mb-3 text-uppercase small text-muted">Categories</h4>
 
-  <!-- Child Sections (Folders) -->
-  {{ $sections := .Sections.ByWeight }}
-  {{ if gt (len $sections) 0 }}
-    <h4 class="mb-3">Sub-Sections</h4>
+<div class="list-group mb-5">
 
-    <div class="row g-4 mb-4">
-      {{ range $sections }}
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ .RelPermalink }}" class="text-decoration-none">
-            <div class="card folder-card h-100 shadow-sm border-0">
-              <div class="card-body d-flex">
-                <i class="bi bi-folder-fill text-warning fs-2 me-3"></i>
-                <div>
-                  <h5 class="card-title mb-1">{{ .Title }}</h5>
-                  {{ if .Summary }}
-                    <p class="text-muted small mb-0">{{ .Summary }}</p>
-                  {{ end }}
-                </div>
-              </div>
+    {{ range $sections }}
+
+    {{ $articles := .Pages }}
+
+    <div class="list-group-item py-4">
+
+        <!-- Category Header -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-folder-fill text-warning me-2"></i>
+                <span class="fw-semibold">{{ .Title }}</span>
+                {{ with .Params.description }}
+                    <span class="text-muted small ms-2">— {{ . }}</span>
+                {{ end }}
             </div>
-          </a>
+
+            <span class="badge bg-primary rounded-pill">
+                {{ len $articles }} articles
+            </span>
         </div>
-      {{ end }}
-    </div>
-  {{ end }}
 
-  <!-- Child Pages (Articles) -->
-  {{ $pages := where (.Pages.ByWeight) "File.BaseFileName" "ne" "_index" }}
-  {{ if gt (len $pages) 0 }}
-    <h4 class="mb-3">Articles</h4>
+        <!-- ======================
+            ARTICLE LIST AS TABLE 
+        ======================= -->
+        <div class="table-responsive">
+            <table class="table table-sm align-middle">
+                <thead class="table-light small">
+                    <tr>
+                        <th style="width:35%">Article</th>
+                        <th style="width:15%">Author</th>
+                        <th style="width:10%">Read Time</th>
+                        <th style="width:40%">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-    <div class="row g-4">
-      {{ range $pages }}
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ .RelPermalink }}" class="text-decoration-none">
-            <div class="card article-card h-100 shadow-sm border-0">
-              <div class="card-body d-flex">
-                <i class="bi bi-file-earmark-text-fill text-primary fs-2 me-3"></i>
-                <div>
-                  <h5 class="card-title mb-1">{{ .Title }}</h5>
+                    {{ range $articles }}
 
-                  {{ if .Summary }}
-                    <p class="text-muted small mb-0">{{ .Summary }}</p>
-                  {{ else }}
-                    <p class="text-muted small mb-0">Click to read more…</p>
-                  {{ end }}
-                </div>
-              </div>
-            </div>
-          </a>
+                    <tr>
+                        <!-- Title -->
+                        <td>
+                            <a href="{{ .RelPermalink }}" class="fw-semibold text-decoration-none">
+                                {{ .Title }}
+                            </a>
+                        </td>
+
+                        <!-- Author -->
+                        <td class="small text-muted">
+                            {{ with .Params.author }}
+                                {{ . }}
+                            {{ else }}
+                                —
+                            {{ end }}
+                        </td>
+
+                        <!-- Read Time -->
+                        <td class="small text-muted">
+                            {{ $mins := div (add .WordCount 199) 200 }}
+                            {{ $mins }} min
+                        </td>
+
+                        <!-- Description -->
+                        <td class="small text-muted">
+                            {{ with .Params.description }}
+                                {{ . }}
+                            {{ else }}
+                                {{ .Summary }}
+                            {{ end }}
+                        </td>
+
+                    </tr>
+
+                    {{ end }}
+
+                </tbody>
+            </table>
         </div>
-      {{ end }}
+
     </div>
-  {{ end }}
+
+    {{ end }}
 
 </div>
+{{ end }}
 
 {{ end }}
