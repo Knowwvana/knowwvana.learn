@@ -47,3 +47,10 @@
 .card-title {
     font-weight: 600;
 }
+.navbar {
+    z-index: 2000 !important;
+    position: relative;
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}

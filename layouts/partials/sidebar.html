@@ -1,7 +1,17 @@
-<div class="flex-shrink-0 p-3 bg-white">
-  <span class="fs-5 fw-semibold d-block pb-2 mb-2 border-bottom">Docs</span>
+<div class="kv-sidebar-header">
+  <span class="kv-sidebar-title">Docs</span>
 
-  <ul class="list-unstyled ps-0">
+  <!-- CHATGPT-LIKE HAMBURGER -->
+  <button id="kvSidebarToggle"
+          class="kv-sidebar-toggle"
+          type="button"
+          aria-label="Toggle sidebar">
+    <i class="bi bi-list"></i>
+  </button>
+</div>
+
+<div class="kv-sidebar-body">
+  <ul class="list-unstyled mb-0">
     {{- $root := site.GetPage "section" "docs" -}}
     {{- if $root -}}
       {{- $current := . -}}
