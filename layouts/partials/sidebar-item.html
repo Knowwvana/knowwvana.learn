@@ -26,7 +26,8 @@
             aria-expanded="{{ if $shouldExpand }}true{{ else }}false{{ end }}"
             style="padding-left: {{ mul $level 12 }}px;">
             <!-- FOLDER ICON (open/closed) -->
-  <i class="bi {{ if $shouldExpand }}bi-folder2-open{{ else }}bi-folder{{ end }} me-2"></i>
+  <i class="bi {{ if $shouldExpand }}bi-folder2-open{{ else }}bi-folder-fill{{ end }} text-warning
+    folder-icon me-1" data-folder-icon="{{ $id }}"></i>
       {{ $node.Title }}
     </button>
 
@@ -50,7 +51,7 @@
     <a href="{{ $node.RelPermalink }}"
        class="link-dark d-inline-flex text-decoration-none rounded {{ if $isActive }}active-link{{ end }}"
        style="padding-left: {{ mul $level 12 }}px;">
-       <i class="bi bi-file-earmark-text me-2"></i>
+       <i class="bi bi-file-earmark-text text-warning me-2"></i>
       {{ if $node.Title }}
       {{ $node.Title }}
   {{ else }}
