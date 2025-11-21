@@ -2,27 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/installation/docker_installation/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/</loc>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/faqs/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq1/</loc>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/faqs/faq1/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq2/</loc>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/faqs/faq2/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/</loc>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/installation/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/</loc>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/docker_installation/</loc>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/installation/docker_installation/docker_installation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/sailpoint/installation/docker_installation/step1/</loc>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/step1/</loc>
   </url><url>
     <loc>http://localhost:1313/knowwvana.learn/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/knowwvana.learn/tags/docker/</loc>
+  </url><url>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/</loc>
   </url><url>
     <loc>http://localhost:1313/knowwvana.learn/docs/</loc>
   </url><url>
     <loc>http://localhost:1313/knowwvana.learn/</loc>
+  </url><url>
+    <loc>http://localhost:1313/knowwvana.learn/tags/sailpoint/</loc>
+  </url><url>
+    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/</loc>
+  </url><url>
+    <loc>http://localhost:1313/knowwvana.learn/tags/setup/</loc>
   </url><url>
     <loc>http://localhost:1313/knowwvana.learn/tags/</loc>
   </url>

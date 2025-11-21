@@ -59,14 +59,13 @@
 
   <!-- Main layout: sidebar + content -->
   <div class="layout-root d-flex">
-
     <!-- Sidebar – ChatGPT style -->
     <aside id="kvSidebar" class="kv-sidebar">
       {{ partial "sidebar.html" . }}
     </aside>
 
     <!-- Main content -->
-    <main class="flex-grow-1 px-4 overflow-auto">
+    <main class="flex-grow-1 px-4">
       {{ partial "hero.html" . }}
 
       <div class="card shadow-sm mb-2">

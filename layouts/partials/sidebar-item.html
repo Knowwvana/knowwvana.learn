@@ -18,9 +18,9 @@
 
   {{ if $node.IsSection }}
 
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center"
+         style="padding-left: {{ mul $level 18 }}px; font-size: 0.95rem;">
 
-      <!-- CARET BUTTON ONLY -->
       {{ if $hasChildren }}
         <button class="btn btn-toggle d-inline-flex align-items-center border-0 p-0 me-1
                        {{ if not $shouldExpand }}collapsed{{ end }}"
@@ -33,16 +33,12 @@
         <span class="me-3"></span>
       {{ end }}
 
-      <!-- FOLDER LINK -->
       <a href="{{ $node.Permalink }}"
          class="d-inline-flex align-items-center text-decoration-none 
-                {{ if $isActive }}active-link{{ end }}"
-         style="margin-left: {{ mul $level 12 }}px;">
+                {{ if $isActive }}active-link{{ end }}">
 
-        <!-- FOLDER ICON -->
         <i class="bi {{ if $shouldExpand }}bi-folder2-open{{ else }}bi-folder-fill{{ end }}
-              text-warning me-2 folder-icon"
-           data-folder-icon="{{ $id }}"></i>
+              text-warning me-2"></i>
 
         {{ $node.Title }}
       </a>
@@ -65,11 +61,10 @@
 
   {{ else }}
 
-    <!-- FILE LINK -->
     <a href="{{ $node.Permalink }}"
-       class="link-dark d-inline-flex text-decoration-none
+       class="link-dark d-inline-flex align-items-center text-decoration-none
               {{ if $isActive }}active-link{{ end }}"
-       style="padding-left: {{ mul $level 12 }}px;">
+       style="padding-left: {{ mul $level 22 }}px; font-size: 0.95rem;">
 
        <i class="bi bi-file-earmark-text text-warning me-2"></i>
 

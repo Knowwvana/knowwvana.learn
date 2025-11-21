@@ -1,0 +1,70 @@
+{{/* Extract values from passed dict BEFORE range */}}
+{{ $items := .items }}
+{{ $cat := .category }}
+{{ $catTitle := $cat.Title }}
+
+<div class="table-responsive collapse show">
+<table class="table table-hover table-sm align-middle mb-0 kv-article-table">
+
+  <thead class="table-light small text-muted text-uppercase">
+    <tr>
+      <th>Article</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th><i class="bi bi-calendar-event"></i> Created</th>
+      <th><i class="bi bi-arrow-repeat"></i> Updated</th>
+      <th><i class="bi bi-stopwatch"></i> Read</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{ range $items }}
+    {{ $a := . }}
+
+    <tr class="kv-article-row"
+        data-title="{{ lower ($a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title)) }}"
+        data-category="{{ lower $catTitle }}"
+        data-tags="{{ with $a.Params.tags }}{{ range . }}{{ lower . }},{{ end }}{{ end }}">
+
+      <td>
+        <a href="{{ $a.RelPermalink }}" class="fw-semibold text-decoration-none">
+          <i class="bi bi-file-text text-secondary"></i>
+          {{ $a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title) }}
+        </a>
+      </td>
+
+      <td class="small text-muted">
+        {{ with $a.Params.description }}{{ . }}{{ else }}{{ $a.Summary }}{{ end }}
+
+        {{ with $a.Params.tags }}
+        <div class="mt-1">
+          {{ range . }}
+            <span class="badge bg-light text-muted border me-1">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </td>
+
+      <td class="small text-muted">
+        {{ with $a.Params.author }}{{ . }}{{ else }}—{{ end }}
+      </td>
+
+      <td class="small text-muted">
+        {{ with $a.Date }}{{ .Format "02 Jan 2006" }}{{ else }}—{{ end }}
+      </td>
+
+      <td class="small text-muted">
+        {{ if $a.Lastmod }}{{ $a.Lastmod.Format "02 Jan 2006" }}{{ else }}—{{ end }}
+      </td>
+
+      <td class="small text-muted">
+        <i class="bi bi-stopwatch"></i>
+        {{ div (add $a.WordCount 199) 200 }} min
+      </td>
+
+    </tr>
+    {{ end }}
+  </tbody>
+
+</table>
+</div>

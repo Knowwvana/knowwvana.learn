@@ -1,7 +1,5 @@
 /* ====== LAYOUT ROOT (aside + main) ====== */
-.layout-root {
-  height: calc(100vh - 70px); /* navbar ~70px, rest is app */
-}
+
 
 /* ====== MAIN SIDEBAR CONTAINER (on <aside>) ====== */
 .kv-sidebar {
