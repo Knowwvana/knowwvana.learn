@@ -2,7 +2,7 @@ baseURL = 'https://knowwvana.github.io/knowwvana.learn/'
 languageCode = 'en-us'
 title = 'Knowwvana Learn'
 enableGitInfo = true
-
+publishDir = "docs"
 [params]
   brand = "Knowvaana"
   tagline = "A living wiki of knowledge & experiments"
