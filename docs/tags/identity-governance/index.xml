@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Identity Governance on Knowwvana Learn</title>
+    <link>http://localhost:1313/knowwvana.learn/tags/identity-governance/</link>
+    <description>Recent content in Identity Governance on Knowwvana Learn</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/knowwvana.learn/tags/identity-governance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Step-by-Step Guide: Building an Authoritative Source from CSV in SailPoint IIQ</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/configuration/1.config_authoritativeapplication_csv/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/configuration/1.config_authoritativeapplication_csv/</guid>
+      <description>&lt;h1 id=&#34;step-by-step-guide-building-an-authoritative-source-from-csv-in-sailpoint-iiq&#34;&gt;Step-by-Step Guide: Building an Authoritative Source from CSV in SailPoint IIQ&lt;/h1&gt;&#xA;&lt;h1 id=&#34;-purpose-of-this-document&#34;&gt;📘 Purpose of This Document&lt;/h1&gt;&#xA;&lt;p&gt;This document provides a &lt;strong&gt;complete, beginner-friendly, step-by-step guide&lt;/strong&gt; for creating an &lt;strong&gt;Authoritative Source Application&lt;/strong&gt; in SailPoint IdentityIQ using a &lt;strong&gt;CSV (Delimited File)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It explains:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What each IAM and SailPoint term actually means&lt;/li&gt;&#xA;&lt;li&gt;Why each configuration step is required&lt;/li&gt;&#xA;&lt;li&gt;How to build the HR Employees authoritative application correctly&lt;/li&gt;&#xA;&lt;li&gt;How schema discovery works&lt;/li&gt;&#xA;&lt;li&gt;How IdentityIQ converts CSV rows into managed identities&lt;/li&gt;&#xA;&lt;li&gt;How to preview, test, and validate the setup&lt;/li&gt;&#xA;&lt;li&gt;A final cheat sheet summarizing all required values&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By the end of this guide, you will fully understand &lt;strong&gt;how IdentityIQ ingests employee data from a CSV file&lt;/strong&gt;, how it becomes an &lt;strong&gt;authoritative identity source&lt;/strong&gt;, and how this process powers &lt;strong&gt;IdentityIQ Identity Lifecycle&lt;/strong&gt;, &lt;strong&gt;Access Certifications&lt;/strong&gt;, &lt;strong&gt;Policy Violations&lt;/strong&gt;, and all downstream identity governance functions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
