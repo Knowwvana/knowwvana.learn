@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Step-by-Step Guide-Building an Authoritative Source from CSV in SailPoint IIQ | Knowwvana Learn</title>
+  <title>Step-by-Step Guide — Building an Authoritative Source from CSV in SailPoint IIQ | Knowwvana Learn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
@@ -640,7 +640,7 @@
        <i class="bi bi-file-earmark-text text-warning me-2"></i>
 
        
-         Step-by-Step Guide-Building an Authoritative Source from CSV in SailPoint IIQ
+         Step-by-Step Guide — Building an Authoritative Source from CSV in SailPoint IIQ
        
     </a>
 
@@ -741,19 +741,19 @@
           
   <article>
     <header class="mb-3">
-      <h1 class="h2">Step-by-Step Guide-Building an Authoritative Source from CSV in SailPoint IIQ</h1>
+      <h1 class="h2">Step-by-Step Guide — Building an Authoritative Source from CSV in SailPoint IIQ</h1>
       <p class="text-muted small mb-0">
         Last updated: 25 Nov 2025
       </p>
     </header>
     <div class="content">
       <h1 id="step-by-step-guide-building-an-authoritative-source-from-csv-in-sailpoint-iiq">Step-by-Step Guide: Building an Authoritative Source from CSV in SailPoint IIQ</h1>
-<h1 id="-purpose-of-this-document">📘 Purpose of This Document</h1>
-<p>This document provides a <strong>complete, beginner-friendly, step-by-step guide</strong> for creating an
+<h2 id="-purpose-of-this-document">📘 Purpose of This Document</h2>
+<p>This document provides a <strong>complete, beginner-friendly, step-by-step guide</strong> for creating an<br>
 <strong>Authoritative Source Application</strong> in SailPoint IdentityIQ using a <strong>CSV (Delimited File)</strong>.</p>
 <p>It explains:</p>
 <ul>
-<li>What each IAM and SailPoint term actually means</li>
+<li>What each IAM and SailPoint term means</li>
 <li>Why each configuration step is required</li>
 <li>How to build the HR Employees authoritative application correctly</li>
 <li>How schema discovery works</li>
@@ -761,10 +761,12 @@
 <li>How to preview, test, and validate the setup</li>
 <li>A final cheat sheet summarizing all required values</li>
 </ul>
-<p>By the end of this guide, you will fully understand <strong>how IdentityIQ ingests employee data from a CSV file</strong>,
-how it becomes an <strong>authoritative identity source</strong>, and how this process powers <strong>IdentityIQ Identity Lifecycle</strong>,
-<strong>Access Certifications</strong>, <strong>Policy Violations</strong>, and all downstream identity governance functions.</p>
+<p>By the end, you will fully understand <strong>how IdentityIQ ingests employee data from a CSV file</strong>,<br>
+how it becomes an <strong>authoritative identity source</strong>, and how this powers <strong>Identity Lifecycle</strong>,<br>
+<strong>Manager relationships</strong>, <strong>Certifications</strong>, and all downstream governance functions.</p>
 <hr>
+<h1 id="-employee-authoritative-source--csv-file-copypaste">📄 Employee Authoritative Source – CSV File (Copy/Paste)</h1>
+<p>Save as: <strong>AuthEmployees.csv</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">employeeId</span>,<span style="color:#e6db74">firstName</span>,<span style="color:#e6db74">lastName</span>,<span style="color:#e6db74">managerId</span>,<span style="color:#e6db74">fullName</span>,<span style="color:#e6db74">email</span>,<span style="color:#e6db74">department</span>,<span style="color:#e6db74">region</span>,<span style="color:#e6db74">location</span>,<span style="color:#e6db74">inactiveUser</span>,<span style="color:#e6db74">jobtitle</span>,<span style="color:#e6db74">costcenter</span>,<span style="color:#e6db74">workStatus</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">E001</span>,<span style="color:#e6db74">John</span>,<span style="color:#e6db74">Doe</span>,<span style="color:#e6db74">E100</span>,<span style="color:#e6db74">John Doe</span>,<span style="color:#e6db74">john.doe@example.com</span>,<span style="color:#e6db74">Finance</span>,<span style="color:#e6db74">NA</span>,<span style="color:#e6db74">New York</span>,<span style="color:#e6db74">False</span>,<span style="color:#e6db74">Analyst</span>,<span style="color:#e6db74">CC100</span>,<span style="color:#e6db74">Active</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">E002</span>,<span style="color:#e6db74">Mary</span>,<span style="color:#e6db74">Smith</span>,<span style="color:#e6db74">E100</span>,<span style="color:#e6db74">Mary Smith</span>,<span style="color:#e6db74">mary.smith@example.com</span>,<span style="color:#e6db74">Finance</span>,<span style="color:#e6db74">NA</span>,<span style="color:#e6db74">Chicago</span>,<span style="color:#e6db74">False</span>,<span style="color:#e6db74">Manager</span>,<span style="color:#e6db74">CC200</span>,<span style="color:#e6db74">Active</span>
@@ -776,8 +778,6 @@ how it becomes an <strong>authoritative identity source</strong>, and how this p
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">E008</span>,<span style="color:#e6db74">Olivia</span>,<span style="color:#e6db74">Johnson</span>,<span style="color:#e6db74">E400</span>,<span style="color:#e6db74">Olivia Johnson</span>,<span style="color:#e6db74">olivia.johnson@example.com</span>,<span style="color:#e6db74">Sales</span>,<span style="color:#e6db74">EMEA</span>,<span style="color:#e6db74">Paris</span>,<span style="color:#e6db74">False</span>,<span style="color:#e6db74">Sales Lead</span>,<span style="color:#e6db74">CC500</span>,<span style="color:#e6db74">Active</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">E009</span>,<span style="color:#e6db74">Noah</span>,<span style="color:#e6db74">Martin</span>,<span style="color:#e6db74">E500</span>,<span style="color:#e6db74">Noah Martin</span>,<span style="color:#e6db74">noah.martin@example.com</span>,<span style="color:#e6db74">IT</span>,<span style="color:#e6db74">NA</span>,<span style="color:#e6db74">San Francisco</span>,<span style="color:#e6db74">True</span>,<span style="color:#e6db74">Support</span>,<span style="color:#e6db74">CC600</span>,<span style="color:#e6db74">Inactive</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">E010</span>,<span style="color:#e6db74">Alice</span>,<span style="color:#e6db74">Wong</span>,<span style="color:#e6db74">E500</span>,<span style="color:#e6db74">Alice Wong</span>,<span style="color:#e6db74">alice.wong@example.com</span>,<span style="color:#e6db74">IT</span>,<span style="color:#e6db74">APAC</span>,<span style="color:#e6db74">Hong Kong</span>,<span style="color:#e6db74">False</span>,<span style="color:#e6db74">System Admin</span>,<span style="color:#e6db74">&#34;CC600,CC601&#34;</span>,<span style="color:#e6db74">Active</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74"># 📄 Employee Authoritative Source – CSV File (Copy/Paste)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">Save this file as:AuthEmployees.csv</span>
 </span></span></code></pre></div><h2 id="-basic-definitions-beginnerfriendly">📘 Basic Definitions (Beginner‑Friendly)</h2>
@@ -816,7 +816,7 @@ Examples: HR systems like Workday, SAP HR, Oracle HCM, CSV files with employee d
       <tr>
           <td><strong>Application</strong></td>
           <td>Any system or file that knows about people</td>
-          <td>• HR system<!-- raw HTML omitted -->• Active Directory<!-- raw HTML omitted -->• A CSV file on your laptop</td>
+          <td>• HR system• Active Directory• A CSV file on your laptop</td>
       </tr>
       <tr>
           <td><strong>Authoritative Application</strong></td>
