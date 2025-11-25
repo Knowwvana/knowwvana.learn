@@ -2,24 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Knowwvana Learn</title>
-    <link>https://knowwvana.github.io/knowwvana.learn/</link>
+    <link>http://localhost:1313/knowwvana.learn/</link>
     <description>Recent content on Knowwvana Learn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://knowwvana.github.io/knowwvana.learn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/knowwvana.learn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter 1 – What is Hugo?</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/hugo/headfirst-hugo-chapter1/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/hugo/headfirst-hugo-chapter1/</guid>
+      <description>&lt;h1 id=&#34;-head-first-hugo--chapter-1&#34;&gt;🤯 &lt;strong&gt;HEAD FIRST HUGO – CHAPTER 1&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;h1 id=&#34;so-what-exactly&#34;&gt;&lt;strong&gt;“So… What Exactly &lt;em&gt;IS&lt;/em&gt; Hugo?”&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;A Full 30–40 Minute Head First Comic Notebook Chapter&lt;/strong&gt;&lt;br&gt;&#xA;Starring &lt;strong&gt;Atul (You!)&lt;/strong&gt;, &lt;strong&gt;Professor Byte&lt;/strong&gt;, &lt;strong&gt;Devlin&lt;/strong&gt;, &lt;strong&gt;Nora&lt;/strong&gt;, and &lt;strong&gt;Bugsy the Debugger 🐞&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;-intro-page--your-brain-wants-a-guidebook&#34;&gt;🧠 INTRO PAGE — “Your Brain Wants a Guidebook!”&lt;/h1&gt;&#xA;&lt;p&gt;Welcome, Atul.&lt;br&gt;&#xA;Today begins your Hugo journey — &lt;em&gt;Head First C#&lt;/em&gt; book style: characters, doodles, comic panels, brain bubbles, sticky notes, puzzles, margins, and those weird moments where you suddenly go:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapter 1 – What is Hugo?</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/hugo/hugo_chapter11/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/hugo/hugo_chapter11/</guid>
+      <description>&lt;h1 id=&#34;learning-hugo--chapter-1&#34;&gt;Learning Hugo – Chapter 1&lt;/h1&gt;&#xA;&lt;h2 id=&#34;so-what-exactly-is-hugo-and-why-should-a-developer-care&#34;&gt;“So… What &lt;em&gt;Exactly&lt;/em&gt; Is Hugo, and Why Should a Developer Care?”&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to &lt;strong&gt;Chapter 1 of the Learning Hugo Series&lt;/strong&gt; in &lt;strong&gt;Knowwvana.learn&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This chapter is written in a style inspired by the &lt;strong&gt;Head First&lt;/strong&gt; series you already love:&lt;br&gt;&#xA;lots of conversations, visuals (in text form), brain-friendly metaphors (tech-only), and plenty of &lt;em&gt;“aha!”&lt;/em&gt; moments.&lt;/p&gt;&#xA;&lt;p&gt;Our goal for this page:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If someone reads &lt;strong&gt;only this chapter&lt;/strong&gt;, they should have a rock-solid mental model of Hugo, its &lt;strong&gt;history&lt;/strong&gt;, &lt;strong&gt;creator&lt;/strong&gt;, &lt;strong&gt;tech stack&lt;/strong&gt;, &lt;strong&gt;purpose&lt;/strong&gt;, and &lt;strong&gt;where it fits&lt;/strong&gt; in a modern developer’s toolbox.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapter 1 – What is Hugo?</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/hugo/hugo_chapter1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/hugo/hugo_chapter1/</guid>
+      <description>&lt;h1 id=&#34;learning-hugo--chapter-1&#34;&gt;Learning Hugo – Chapter 1&lt;/h1&gt;&#xA;&lt;h1 id=&#34;so-what-exactly-is-hugo&#34;&gt;“So… What &lt;em&gt;Exactly&lt;/em&gt; Is Hugo?”&lt;/h1&gt;&#xA;&lt;h2 id=&#34;-introduction--what-this-page-will-teach-you&#34;&gt;🧠 Introduction – What this page will teach you&lt;/h2&gt;&#xA;&lt;p&gt;Congratulations — you’ve just opened Page 1 of your Hugo journey.&#xA;This chapter is ALL about understanding &lt;strong&gt;what Hugo is&lt;/strong&gt;, &lt;strong&gt;why it exists&lt;/strong&gt;, &lt;strong&gt;who created it&lt;/strong&gt;, and &lt;strong&gt;where it fits in the modern web world&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;By the end of this page, you’ll know everything needed without searching anywhere else.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-table-of-contents&#34;&gt;📘 Table of Contents&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;What is a Static Site Generator?&lt;/li&gt;&#xA;&lt;li&gt;Meet Hugo – the Fastest Static Site Generator&lt;/li&gt;&#xA;&lt;li&gt;Who Created Hugo?&lt;/li&gt;&#xA;&lt;li&gt;What Hugo Is Made Of (Tech Stack)&lt;/li&gt;&#xA;&lt;li&gt;What Can You Build With Hugo?&lt;/li&gt;&#xA;&lt;li&gt;Why Developers Prefer Hugo&lt;/li&gt;&#xA;&lt;li&gt;Mental Models &amp;amp; Illustrations&lt;/li&gt;&#xA;&lt;li&gt;Practical Examples&lt;/li&gt;&#xA;&lt;li&gt;Summary&lt;/li&gt;&#xA;&lt;li&gt;Knowledge Check&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-1-what-is-a-static-site-generator&#34;&gt;🧩 1. What Is a Static Site Generator?&lt;/h2&gt;&#xA;&lt;p&gt;Think of a restaurant.&#xA;Dynamic sites cook food fresh every time.&#xA;Static site generators prepare dishes ahead of time — instant serving.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FAQ1</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FAQ2</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Step-by-Step Guide-Building an Authoritative Source from CSV in SailPoint IIQ</title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/configuration/1.config_authoritativeapplication_csv/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/configuration/1.config_authoritativeapplication_csv/</guid>
+      <description>&lt;h1 id=&#34;step-by-step-guide-building-an-authoritative-source-from-csv-in-sailpoint-iiq&#34;&gt;Step-by-Step Guide: Building an Authoritative Source from CSV in SailPoint IIQ&lt;/h1&gt;&#xA;&lt;h1 id=&#34;-purpose-of-this-document&#34;&gt;📘 Purpose of This Document&lt;/h1&gt;&#xA;&lt;p&gt;This document provides a &lt;strong&gt;complete, beginner-friendly, step-by-step guide&lt;/strong&gt; for creating an&#xA;&lt;strong&gt;Authoritative Source Application&lt;/strong&gt; in SailPoint IdentityIQ using a &lt;strong&gt;CSV (Delimited File)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It explains:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What each IAM and SailPoint term actually means&lt;/li&gt;&#xA;&lt;li&gt;Why each configuration step is required&lt;/li&gt;&#xA;&lt;li&gt;How to build the HR Employees authoritative application correctly&lt;/li&gt;&#xA;&lt;li&gt;How schema discovery works&lt;/li&gt;&#xA;&lt;li&gt;How IdentityIQ converts CSV rows into managed identities&lt;/li&gt;&#xA;&lt;li&gt;How to preview, test, and validate the setup&lt;/li&gt;&#xA;&lt;li&gt;A final cheat sheet summarizing all required values&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By the end of this guide, you will fully understand &lt;strong&gt;how IdentityIQ ingests employee data from a CSV file&lt;/strong&gt;,&#xA;how it becomes an &lt;strong&gt;authoritative identity source&lt;/strong&gt;, and how this process powers &lt;strong&gt;IdentityIQ Identity Lifecycle&lt;/strong&gt;,&#xA;&lt;strong&gt;Access Certifications&lt;/strong&gt;, &lt;strong&gt;Policy Violations&lt;/strong&gt;, and all downstream identity governance functions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title></title>
-      <link>https://knowwvana.github.io/knowwvana.learn/docs/sailpoint/installation/docker_installation/docker_installation/</link>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/github/github_commands_cheatsheat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://knowwvana.github.io/knowwvana.learn/docs/sailpoint/installation/docker_installation/docker_installation/</guid>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/github/github_commands_cheatsheat/</guid>
+      <description>&lt;p&gt;echo &amp;ldquo;# SetupSailpointDockerDesktop&amp;rdquo; &amp;raquo; README.md&#xA;git init&#xA;git add README.md&#xA;git commit -m &amp;ldquo;first commit&amp;rdquo;&#xA;git branch -M main&#xA;git remote add origin &lt;a href=&#34;https://github.com/Knowwvana/SetupSailpointDockerDesktop.git&#34;&gt;https://github.com/Knowwvana/SetupSailpointDockerDesktop.git&lt;/a&gt;&#xA;git push -u origin main&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/identityiq-docker-setup-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/identityiq-docker-setup-guide/</guid>
+      <description>&lt;h1 id=&#34;sailpoint-identityiq-84--docker-dev-environment-devdays-2025&#34;&gt;SailPoint IdentityIQ 8.4 – Docker Dev Environment (DevDays 2025)&lt;/h1&gt;&#xA;&lt;p&gt;This guide explains, &lt;strong&gt;step by step&lt;/strong&gt;, how to set up a &lt;strong&gt;local SailPoint IdentityIQ 8.4 development environment&lt;/strong&gt; using:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SailPoint Developer Days Docker reference:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;“Leveraging SailPoint IdentityIQ and Docker for seamless development” (Dev Days session)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;GitHub repo:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;iiq-docker-developer-days-2025&lt;/code&gt; (Yannick Beot – SailPoint)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Official IdentityIQ 8.4 distribution from SailPoint Compass&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The goal is that &lt;strong&gt;anyone&lt;/strong&gt; can follow this and get IdentityIQ running locally on Docker Desktop from scratch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/docker_installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/docker_installation/</guid>
       <description>&lt;p&gt;docker installation&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://knowwvana.github.io/knowwvana.learn/docs/sailpoint/installation/docker_installation/step1/</link>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/step1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://knowwvana.github.io/knowwvana.learn/docs/sailpoint/installation/docker_installation/step1/</guid>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/step1/</guid>
       <description>&lt;p&gt;Test item&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/migration/iiq_azure_migration_overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/migration/iiq_azure_migration_overview/</guid>
+      <description>&lt;h1 id=&#34;sailpoint-iiq--azure-migration&#34;&gt;SailPoint IIQ ➝ Azure Migration&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a-complete-architecture--step-by-step-blueprint&#34;&gt;A Complete Architecture &amp;amp; Step-by-Step Blueprint&lt;/h2&gt;&#xA;&lt;p&gt;Author: Atul&lt;br&gt;&#xA;Version: 1.1&lt;br&gt;&#xA;Date: 2025-11-23&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;-overview&#34;&gt;📌 Overview&lt;/h1&gt;&#xA;&lt;p&gt;This document provides a &lt;strong&gt;complete, official, non-assumptive&lt;/strong&gt; blueprint for performing a &lt;strong&gt;SailPoint IdentityIQ → Microsoft Azure (Entra ID + Identity Governance)&lt;/strong&gt; migration.&lt;br&gt;&#xA;It contains:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What actually gets migrated&lt;/li&gt;&#xA;&lt;li&gt;Architecture diagrams&lt;/li&gt;&#xA;&lt;li&gt;Extraction → Transformation → Load phases&lt;/li&gt;&#xA;&lt;li&gt;REST vs SPConfig vs SCIM (differences &amp;amp; usage)&lt;/li&gt;&#xA;&lt;li&gt;Web-based Migration Platform Architecture&lt;/li&gt;&#xA;&lt;li&gt;POC plan using ASP.NET + SPConfig + REST&lt;/li&gt;&#xA;&lt;li&gt;Roadmap for the complete migration tool&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is the &lt;strong&gt;master overview document&lt;/strong&gt;.&lt;br&gt;&#xA;A detailed step-by-step migration guide will be created later during implementation.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

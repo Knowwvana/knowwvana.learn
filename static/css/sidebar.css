@@ -1,34 +1,86 @@
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+/* ====== LAYOUT ROOT (aside + main) ====== */
+
+
+/* ====== MAIN SIDEBAR CONTAINER (on <aside>) ====== */
+.kv-sidebar {
+  width: 280px;                 /* expanded width */
+  background: #ffffff;
+  border-right: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;             /* hide content when narrowed */
+  transition: width 0.25s ease; /* smooth like ChatGPT */
 }
 
-html {
-  height: -webkit-fill-available;
+/* Collapsed – ChatGPT-style slim bar (never 0) */
+.kv-sidebar--collapsed {
+  width: 60px;
 }
 
-main {
-  height: 100vh;
-  height: -webkit-fill-available;
-  max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+/* ====== SIDEBAR HEADER (Docs + hamburger) ====== */
+.kv-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem .75rem;
+  border-bottom: 1px solid #dee2e6;
 }
 
-.dropdown-toggle { outline: 0; }
+.kv-sidebar-title {
+  font-weight: 600;
+  font-size: .95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+/* Hide text when collapsed – only hamburger stays */
+.kv-sidebar--collapsed .kv-sidebar-title {
+  display: none;
+}
+
+/* Hamburger toggle */
+.kv-sidebar-toggle {
+  border: none;
+  background: transparent;
+  padding: .25rem;
+  line-height: 1;
+  color: #495057;
+}
+
+.kv-sidebar-toggle .bi {
+  font-size: 1.25rem;
+}
+
+/* ====== SIDEBAR BODY (tree / menu) ====== */
+.kv-sidebar-body {
+  flex: 1 1 auto;
+  padding: .75rem;
+  overflow-y: auto;
+}
+
+/* When collapsed: hide the whole tree, keep only bar + hamburger */
+.kv-sidebar--collapsed .kv-sidebar-body {
+  display: none;
+}
+
+/* ====== YOUR EXISTING, WORKING BOOTSTRAP-LIKE STYLES ====== */
+
+/* Root sidebar list area (inside kv-sidebar-body) */
 .btn-toggle {
   padding: .25rem .5rem;
   font-weight: 600;
   color: rgba(0, 0, 0, .65);
   background-color: transparent;
 }
+
 .btn-toggle:hover,
 .btn-toggle:focus {
   color: rgba(0, 0, 0, .85);
   background-color: #d2f4ea;
 }
 
+/* caret from official Bootstrap example */
 .btn-toggle::before {
   width: 1.25em;
   line-height: 0;
@@ -37,9 +89,6 @@ main {
   transform-origin: .5em 50%;
 }
 
-.btn-toggle[aria-expanded="true"] {
-  color: rgba(0, 0, 0, .85);
-}
 .btn-toggle[aria-expanded="true"]::before {
   transform: rotate(90deg);
 }
@@ -47,34 +96,16 @@ main {
 .btn-toggle-nav a {
   padding: .1875rem .5rem;
   margin-top: .125rem;
-  margin-left: 1.25rem;
 }
+
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
   background-color: #d2f4ea;
 }
 
-.scrollarea {
-  overflow-y: auto;
-}
-/* Sidebar should stay fixed while scrolling */
-/* Sticky sidebar */
-aside {
-  position: sticky;
-  top: 80px; /* adjust if navbar height changes */
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-}
-
-/* Active item styling (folder or page) */
+/* Active highlight for current page/section */
 .active-link {
-  background-color: #e7f1ff;
+  background-color: #e7f1ff !important;
   color: #0d6efd !important;
   font-weight: 600;
-  border-radius: 4px;
-}
-
-/* Smooth collapse animation */
-.collapse {
-  transition: height .25s ease;
 }

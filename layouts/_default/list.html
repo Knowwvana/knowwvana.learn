@@ -1,75 +1,392 @@
 {{ define "main" }}
 
-<div class="container-fluid">
+<h1 class="mb-4 fw-bold d-flex justify-content-between align-items-center">
+  <span>{{ .Title }}</span>
+</h1>
 
-  <!-- Section Title -->
-  <div class="card shadow-sm border-0 mb-4">
-    <div class="card-body">
-      <h1 class="display-6 mb-3">{{ .Title }}</h1>
+{{ with .Content }}
+<div>
+  {{ . }}
+</div>
+{{ end }}
 
-      {{ if .Content }}
-        <div class="text-muted fs-5">
-          {{ .Content }}
+<!-- {{/* Show latest articles */}} -->
+{{/* Fetch latest articles recursively */}}
+{{ $all := where .RegularPagesRecursive "File.BaseFileName" "ne" "_index" }}
+{{ $latest := first 5 (sort $all "Date" "desc") }}
+{{ $total := len $all }}
+
+{{ if gt (len $latest) 0 }}
+
+<div class="row mb-4">
+  <div class="col-md-6">
+
+    <div class="card shadow-sm border-0">
+      <div class="card-body bg-light">
+        <div class="text-muted mb-3">
+          <span class="fw-bold fs-4 text-dark">Latest 5 Articles</span>
+          <span class="badge text-bg-info ms-2">Total Articles: {{ $total }}</span>
         </div>
-      {{ end }}
+
+        <!-- HEADER -->
+        <div class="small text-muted fw-bold d-flex mb-2 px-1 latest-header">
+          <div class="col-5">Article Name</div>
+          <div class="col-3">Created</div>
+          <div class="col-3">Updated</div>
+          <div class="col-1">Read Time</div>
+        </div>
+
+        <ul class="list-unstyled mb-0">
+          {{ range $latest }}
+          {{ $a := . }}
+          <li class="latest-list-item py-1">
+            <div class="d-flex align-items-center px-1 latest-row">
+              <!-- Article Name -->
+              <div class="col-5 text-truncate">
+                <a href="{{ $a.RelPermalink }}"
+                   class="fw-semibold text-primary text-decoration-none">
+                   • {{ $a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title) }}
+                </a>
+              </div>
+
+              <!-- Created -->
+              <div class="col-3 small text-muted d-flex align-items-center">
+                <i class="bi bi-calendar-event me-1"></i>
+                {{ $date := $a.Date }}
+                {{ if eq $date.Year 1 }}
+                    {{ with $a.File }}{{ .FileInfo.ModTime.Format "02 Jan 2006" }}{{ end }}
+                {{ else }}
+                    {{ $a.Date.Format "02 Jan 2006" }}
+                {{ end }}
+              </div>
+
+              <!-- Updated -->
+              <div class="col-3 small text-muted d-flex align-items-center">
+                <i class="bi bi-arrow-repeat me-1"></i>
+                {{ with $a.File }}{{ .FileInfo.ModTime.Format "02 Jan 2006" }}{{ end }}
+              </div>
+
+              <!-- Read -->
+              <div class="col-1 small text-muted d-flex align-items-center">
+                <i class="bi bi-stopwatch me-1"></i>
+                {{ div (add $a.WordCount 199) 200 }} 
+                min
+              </div>
+
+            </div>
+
+          </li>
+          {{ end }}
+
+        </ul>
+
+      </div>
     </div>
+
   </div>
+</div>
 
-  <!-- Child Sections (Folders) -->
-  {{ $sections := .Sections.ByWeight }}
-  {{ if gt (len $sections) 0 }}
-    <h4 class="mb-3">Sub-Sections</h4>
+{{ end }}
 
-    <div class="row g-4 mb-4">
-      {{ range $sections }}
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ .RelPermalink }}" class="text-decoration-none">
-            <div class="card folder-card h-100 shadow-sm border-0">
-              <div class="card-body d-flex">
-                <i class="bi bi-folder-fill text-warning fs-2 me-3"></i>
-                <div>
-                  <h5 class="card-title mb-1">{{ .Title }}</h5>
-                  {{ if .Summary }}
-                    <p class="text-muted small mb-0">{{ .Summary }}</p>
+
+
+
+<!-- SEARCH -->
+<div class="kv-doc-search ms-auto" style="max-width: 600px;">
+  
+  <div class="input-group input-group-lg mb-4">
+      <span class="input-group-text bg-white border-end-0">
+          <i class="bi bi-search text-muted"></i>
+      </span>
+      <input id="kvDocSearch"
+             type="search"
+             class="form-control border-start-0"
+             placeholder="Filter articles in this section (title, category, tag)…" autocomplete="off"/>
+  </div>  
+  <!-- result counter -->
+  <div id="kvResultCount" class="kv-result-count badge text-bg-success text-white"
+     style="display:none"></div>
+
+</div>
+
+
+{{ $sections := .Sections.ByTitle }}
+{{ $files := where .RegularPages "File.BaseFileName" "ne" "_index" }}
+
+<!-- ===========================================================
+     CASE 1: FOLDER HAS SECTIONS → CATEGORY LISTING
+=========================================================== -->
+{{ if gt (len $sections) 0 }}
+
+<h6 class="text-uppercase text-muted small mb-3">Categories</h6>
+
+<div class="list-group mb-5">
+
+  {{ range $sections }}
+  {{ $category := . }}
+  {{ $articles := $category.Pages.ByTitle }}
+  {{ $catID := printf "cat-%s" (replace $category.RelPermalink "/" "-" -1) }}
+
+  <div class="list-group-item border-0 py-4">
+
+    <!-- Category Header -->
+    <div class="d-flex justify-content-between align-items-center mb-2 kv-category-header">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-folder-fill text-warning me-2"></i>
+
+        <button class="btn btn-sm btn-link p-0 text-decoration-none fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#{{ $catID }}">
+          {{ $category.Title }}
+          <i class="bi bi-chevron-down ms-1 small text-muted"></i>
+        </button>
+      </div>
+
+      <span class="badge bg-primary rounded-pill">
+        {{ len $articles }} {{ if eq (len $articles) 1 }}article{{ else }}articles{{ end }}
+      </span>
+    </div>
+
+    {{ with $category.Params.description }}
+    <div class="text-muted small mb-3 ms-4 ps-1">{{ . }}</div>
+    {{ end }}
+
+    <!-- Category Content -->
+    <div class="collapse show" id="{{ $catID }}">
+      <div class="table-responsive">
+
+        <table class="table table-hover table-sm align-middle mb-0 kv-article-table">
+
+          <thead class="table-light small text-muted text-uppercase">
+            <tr>
+              <th>Article</th>
+              <th>Description</th>
+              <th>Author</th>
+              <th><i class="bi bi-calendar-event"></i> Created</th>
+              <th><i class="bi bi-arrow-repeat"></i> Updated</th>
+              <th><i class="bi bi-stopwatch"></i> Read Time</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{ range $articles }}
+            {{ $a := . }}
+
+            <tr class="kv-article-row"
+                data-title="{{ lower ($a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title)) }}"
+                data-category="{{ lower $category.Title }}"
+                data-tags="{{ with $a.Params.tags }}{{ range . }}{{ lower . }},{{ end }}{{ end }}">
+
+              <!-- ARTICLE TITLE -->
+              <td>
+                <a href="{{ $a.RelPermalink }}" class="fw-semibold text-decoration-none">
+                  <i class="bi bi-file-text text-secondary"></i>
+                  {{ $a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title) }}
+                </a>
+              </td>
+
+              <!-- DESCRIPTION -->
+              <td class="small text-muted">
+                {{ with $a.Params.description }}
+                  {{ . }}
+                {{ else }}
+                  {{ $a.Summary }}
+                {{ end }}
+
+                {{ with $a.Params.tags }}
+                <div class="mt-1">
+                  {{ range . }}
+                    <span class="badge rounded-pill bg-light text-muted border me-1">{{ . }}</span>
                   {{ end }}
                 </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      {{ end }}
+                {{ end }}
+              </td>
+
+              <!-- AUTHOR -->
+              <td class="small text-muted">
+                {{ with $a.Params.author }}{{ . }}{{ else }}—{{ end }}
+              </td>
+
+              <!-- DATE CREATED -->
+              <td class="small text-muted">
+                {{ with $a.Date }}{{ .Format "02 Jan 2006" }}{{ else }}—{{ end }}
+              </td>
+
+              <!-- DATE UPDATED -->
+              <td class="small text-muted">
+                {{ if $a.Lastmod }}{{ $a.Lastmod.Format "02 Jan 2006" }}{{ else }}—{{ end }}
+              </td>
+
+              <!-- READ TIME -->
+              <td class="small text-muted">
+                <i class="bi bi-stopwatch"></i>
+                {{ div (add $a.WordCount 199) 200 }} min
+              </td>
+
+            </tr>
+            {{ end }}
+          </tbody>
+
+        </table>
+
+      </div>
     </div>
-  {{ end }}
 
-  <!-- Child Pages (Articles) -->
-  {{ $pages := where (.Pages.ByWeight) "File.BaseFileName" "ne" "_index" }}
-  {{ if gt (len $pages) 0 }}
-    <h4 class="mb-3">Articles</h4>
-
-    <div class="row g-4">
-      {{ range $pages }}
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ .RelPermalink }}" class="text-decoration-none">
-            <div class="card article-card h-100 shadow-sm border-0">
-              <div class="card-body d-flex">
-                <i class="bi bi-file-earmark-text-fill text-primary fs-2 me-3"></i>
-                <div>
-                  <h5 class="card-title mb-1">{{ .Title }}</h5>
-
-                  {{ if .Summary }}
-                    <p class="text-muted small mb-0">{{ .Summary }}</p>
-                  {{ else }}
-                    <p class="text-muted small mb-0">Click to read more…</p>
-                  {{ end }}
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      {{ end }}
-    </div>
+  </div>
   {{ end }}
 
 </div>
+
+<!-- ===========================================================
+     CASE 2: FOLDER HAS *ONLY FILES* → SHOW ARTICLES TABLE
+=========================================================== -->
+{{ else }}
+
+<h6 class="text-uppercase text-muted small mb-3 mt-4">Articles</h6>
+
+<div class="table-responsive">
+  <table class="table table-hover table-sm align-middle mb-0 kv-article-table">
+
+    <thead class="table-light small text-muted text-uppercase">
+      <tr>
+        <th>Article</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th><i class="bi bi-calendar-event"></i> Created</th>
+        <th><i class="bi bi-arrow-repeat"></i> Updated</th>
+        <th><i class="bi bi-stopwatch"></i> Read Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      {{ range $files }}
+      {{ $a := . }}
+
+      <tr class="kv-article-row"
+          data-title="{{ lower ($a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title)) }}"
+          data-category="{{ lower $.Title }}"
+          data-tags="{{ with $a.Params.tags }}{{ range . }}{{ lower . }},{{ end }}{{ end }}">
+
+        <td>
+          <a href="{{ $a.RelPermalink }}" class="fw-semibold text-decoration-none">
+            <i class="bi bi-file-text text-secondary"></i>
+            {{ $a.Title | default (replace (replace ($a.File.BaseFileName) "-" " ") "_" " " | title) }}
+          </a>
+        </td>
+
+        <td class="small text-muted">
+          {{ with $a.Params.description }}{{ . }}{{ else }}{{ $a.Summary }}{{ end }}
+
+          {{ with $a.Params.tags }}
+          <div class="mt-1">
+            {{ range . }}<span class="badge bg-light text-muted border me-1">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+        </td>
+
+        <td class="small text-muted">
+          {{ with $a.Params.author }}{{ . }}{{ else }}—{{ end }}
+        </td>
+
+        <td class="small text-muted">
+          {{ with $a.Date }}{{ .Format "02 Jan 2006" }}{{ else }}—{{ end }}
+        </td>
+
+        <td class="small text-muted">
+          {{ if $a.Lastmod }}{{ $a.Lastmod.Format "02 Jan 2006" }}{{ else }}—{{ end }}
+        </td>
+
+        <td class="small text-muted">
+          <i class="bi bi-stopwatch"></i>
+          {{ div (add $a.WordCount 199) 200 }} min
+        </td>
+
+      </tr>
+      {{ end }}
+
+    </tbody>
+
+  </table>
+</div>
+
+{{ end }}
+
+<!-- ===========================================================
+     SEARCH SCRIPT
+=========================================================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const input = document.getElementById("kvDocSearch");
+  const counter = document.getElementById("kvResultCount");
+
+  if (!input) return;
+
+  // All article rows
+  const rows = Array.from(document.querySelectorAll(".kv-article-row"));
+
+  // Hide folders with no visible results
+  function updateFolderVisibility() {
+
+    // Category mode
+    document.querySelectorAll(".list-group-item").forEach(folder => {
+      const articleRows = folder.querySelectorAll(".kv-article-row");
+      const visibleRows = Array.from(articleRows).filter(r => !r.classList.contains("d-none"));
+
+      folder.classList.toggle("d-none", visibleRows.length === 0);
+    });
+
+    // Files-only mode (no sections)
+    const tableOnly = document.querySelector("table.kv-article-table");
+    if (tableOnly && !document.querySelector(".list-group-item")) {
+      const visibleRows = Array.from(
+        tableOnly.querySelectorAll(".kv-article-row")
+      ).filter(r => !r.classList.contains("d-none"));
+
+      tableOnly.closest(".table-responsive").classList.toggle("d-none", visibleRows.length === 0);
+    }
+  }
+
+  // Update result count
+  function updateResultCount(query) {
+    const visibleRows = rows.filter(r => !r.classList.contains("d-none"));
+
+    // Show count ONLY when searching
+    if (query.length > 0) {
+      counter.style.display = "block";
+      counter.style.color = "green";
+      counter.textContent = `${visibleRows.length} result${visibleRows.length === 1 ? "" : "s"} found`;
+    } else {
+      counter.style.display = "none";
+      counter.textContent = "";
+    }
+  }
+
+  // MAIN SEARCH
+  input.addEventListener("input", function () {
+    const q = this.value.trim().toLowerCase();
+
+    rows.forEach(row => {
+      const haystack = [
+        row.dataset.title || "",
+        row.dataset.category || "",
+        row.dataset.tags || ""
+      ].join(" ");
+
+      haystack.includes(q)
+        ? row.classList.remove("d-none")
+        : row.classList.add("d-none");
+    });
+
+    updateFolderVisibility();
+    updateResultCount(q);
+  });
+
+});
+</script>
+
+
 
 {{ end }}

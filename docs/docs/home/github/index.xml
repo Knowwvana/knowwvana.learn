@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Knowwvana Learn</title>
+    <link>http://localhost:1313/knowwvana.learn/docs/home/github/</link>
+    <description>Recent content in Github on Knowwvana Learn</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/knowwvana.learn/docs/home/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/knowwvana.learn/docs/home/github/github_commands_cheatsheat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/knowwvana.learn/docs/home/github/github_commands_cheatsheat/</guid>
+      <description>&lt;p&gt;echo &amp;ldquo;# SetupSailpointDockerDesktop&amp;rdquo; &amp;raquo; README.md&#xA;git init&#xA;git add README.md&#xA;git commit -m &amp;ldquo;first commit&amp;rdquo;&#xA;git branch -M main&#xA;git remote add origin &lt;a href=&#34;https://github.com/Knowwvana/SetupSailpointDockerDesktop.git&#34;&gt;https://github.com/Knowwvana/SetupSailpointDockerDesktop.git&lt;/a&gt;&#xA;git push -u origin main&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

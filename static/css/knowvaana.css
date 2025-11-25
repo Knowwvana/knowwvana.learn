@@ -1,49 +1,134 @@
 /* HERO BACKGROUND */
 .hero-section {
-  background-image: url('../img/Hero_Background2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 1rem;
-  min-height: 200px;
-  position: relative;
-  border-radius: 1rem;
-  color: white;
+    background-image: url('../img/Hero_Background2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    min-height: 200px;
+    position: relative;
+    border-radius: 1rem;
+    color: white;
 }
 
 /* Optional: dark overlay for readability */
 .hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(2px);
-  background: rgba(0,0,0,0.45);
-  border-radius: 1rem;
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 1rem;
 }
 
 
 /* ensure content appears above overlay */
 .hero-section .container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 /* Search bar white text contrast */
 .hero-search input {
-  border: none;
+    border: none;
 }
 
 .hero-search input::placeholder {
-  color: #d2d2d2;
+    color: #d2d2d2;
 }
 
 .folder-card:hover,
 .article-card:hover {
     transform: translateY(-3px);
     transition: 0.2s ease;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
 }
 
 .card-title {
     font-weight: 600;
+}
+
+.navbar {
+    z-index: 2000 !important;
+    position: relative;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* Search bar styling */
+.kv-doc-search .form-control {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.kv-doc-search .input-group-text {
+    border-radius: 999px 0 0 999px;
+}
+
+/* Category header spacing */
+.kv-category-header button {
+    font-size: 0.95rem;
+}
+
+/* Table look: MS Learn / Atlassian-ish */
+.kv-article-table th {
+    font-size: 0.75rem;
+    letter-spacing: .05em;
+}
+
+.kv-category-header button:hover {
+    text-decoration: underline;
+}
+
+.kv-category-header i.bi-chevron-down {
+    transition: transform 0.2s;
+}
+
+.collapse.show+.kv-category-header i.bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+.kv-category-header {
+    margin-bottom: .25rem !important;
+}
+
+.kv-article-table td,
+.kv-article-table th {
+    padding-top: .35rem !important;
+    padding-bottom: .35rem !important;
+}
+
+/* Hover highlight for article rows */
+.kv-article-table tbody tr:hover,
+.kv-article-table tbody tr:hover td {
+    background-color: #e8f9fc !important;
+    /* light blue hover */
+}
+
+/* Optional: make the title feel interactive */
+.kv-article-row:hover a {
+    text-decoration: underline;
+}
+
+.list-group-item {
+    padding-top: 1rem !important;
+    padding-bottom: .5rem !important;
+}
+.kv-result-count {
+    padding-left: 42px !important; /* aligns with input text */
+}
+
+/* Latest Articles */
+.latest-list-item {
+    border-bottom: 1px dashed #e5e5e5;
+    padding-bottom: 4px;
+}
+.latest-list-item:last-child {
+    border-bottom: none;
+}
+.latest-list-item a:hover {
+    text-decoration: underline;
 }
