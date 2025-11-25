@@ -5,7 +5,7 @@ description: "A curated space of practical, real-world technical knowledge acros
 
 Welcome to **Knowwvana — Where knowledge becomes wisdom**.
 
-Your personal hub of clarity, understanding, and technical excellence. This space brings together everything you learn, build, explore, and refine across your career.  Every note, tutorial, walkthrough, and troubleshooting guide here exists with one purpose:
+Your personal hub of clarity, understanding, and technical excellence. This space brings together everything you learn, build, explore, and refine across your career. Every note, tutorial, walkthrough, and troubleshooting guide here exists with one purpose:
 
 ### **To make knowledge effortless, organised, and always accessible.**
 
