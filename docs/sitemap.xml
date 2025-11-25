@@ -2,100 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/hugo/headfirst-hugo-chapter1/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/hugo/headfirst-hugo-chapter1/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/hugo/hugo_chapter11/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/hugo/hugo_chapter11/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/hugo/hugo_chapter1/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/hugo/hugo_chapter1/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/faqs/</loc>
     <lastmod>2025-11-21T20:40:30+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq1/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/faqs/faq1/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/faqs/faq2/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/faqs/faq2/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/installation/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/migration/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/migration/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/configuration/1.config_authoritativeapplication_csv/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/authoritative-source/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/authoritative-source/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/categories/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/categories/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/cheat-sheet/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/configuration/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/csv-connector/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/csv-connector/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/categories/devops/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/devops/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/categories/iam-fundamentals/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/</loc>
+    <lastmod>2025-11-25T12:12:52+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/identity-governance/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/git/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/identityiq/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/categories/github/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/iiq-configuration/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/github/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/github/github_commands_cheatsheat/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/sailpoint/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/categories/iam-fundamentals/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/categories/sailpoint-identityiq/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/identity-governance/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/identityiq/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/hugo/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/iiq-configuration/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/github/github_commands_cheatsheat/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/knowwvana/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/identityiq-docker-setup-guide/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/</loc>
+    <lastmod>2025-11-25T12:12:52+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/docker_installation/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/sailpoint/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/categories/sailpoint-identityiq/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/configuration/1.config_authoritativeapplication_csv/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/identityiq-docker-setup-guide/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/docker_installation/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/step1/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/step1/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/migration/iiq_azure_migration_overview/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/migration/iiq_azure_migration_overview/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/docker/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/configuration/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/docker/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/installation/docker_installation/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/github/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/github/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/</loc>
-    <lastmod>2025-11-21T20:40:30+05:30</lastmod>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/hugo/</loc>
+    <lastmod>2025-11-25T12:06:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/docs/home/sailpoint/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/</loc>
+    <lastmod>2025-11-25T12:12:52+05:30</lastmod>
+  </url><url>
+    <loc>https://knowwvana.github.io/knowwvana.learn/docs/home/sailpoint/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knowwvana.learn/tags/setup/</loc>
+    <loc>https://knowwvana.github.io/knowwvana.learn/tags/setup/</loc>
     <lastmod>2025-11-21T19:17:22+05:30</lastmod>
   </url>
 </urlset>

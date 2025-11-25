@@ -2,66 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Knowwvana Learn</title>
-    <link>http://localhost:1313/knowwvana.learn/tags/</link>
+    <link>https://knowwvana.github.io/knowwvana.learn/tags/</link>
     <description>Recent content in Tags on Knowwvana Learn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/knowwvana.learn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Nov 2025 12:06:25 +0530</lastBuildDate>
+    <atom:link href="https://knowwvana.github.io/knowwvana.learn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Authoritative Source</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/authoritative-source/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/authoritative-source/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/authoritative-source/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/authoritative-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cheat Sheet</title>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/cheat-sheet/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/cheat-sheet/</guid>
       <description></description>
     </item>
     <item>
       <title>CSV Connector</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/csv-connector/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/csv-connector/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/csv-connector/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/csv-connector/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/devops/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/git/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/github/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Identity Governance</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/identity-governance/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/identity-governance/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/identity-governance/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/identity-governance/</guid>
       <description></description>
     </item>
     <item>
       <title>IdentityIQ</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/identityiq/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/identityiq/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/identityiq/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/identityiq/</guid>
       <description></description>
     </item>
     <item>
       <title>IIQ Configuration</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/iiq-configuration/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/iiq-configuration/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/iiq-configuration/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/iiq-configuration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Knowwvana</title>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/knowwvana/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/knowwvana/</guid>
       <description></description>
     </item>
     <item>
       <title>Sailpoint</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/sailpoint/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/sailpoint/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/sailpoint/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/sailpoint/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/docker/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/docker/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Setup</title>
-      <link>http://localhost:1313/knowwvana.learn/tags/setup/</link>
+      <link>https://knowwvana.github.io/knowwvana.learn/tags/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/knowwvana.learn/tags/setup/</guid>
+      <guid>https://knowwvana.github.io/knowwvana.learn/tags/setup/</guid>
       <description></description>
     </item>
   </channel>
