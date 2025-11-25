@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>migration on Knowwvana Learn</title>
+    <link>https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/migration/</link>
+    <description>Recent content in migration on Knowwvana Learn</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/migration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/migration/iiq_azure_migration_overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/migration/iiq_azure_migration_overview/</guid>
+      <description>&lt;h1 id=&#34;sailpoint-iiq--azure-migration&#34;&gt;SailPoint IIQ ➝ Azure Migration&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a-complete-architecture--step-by-step-blueprint&#34;&gt;A Complete Architecture &amp;amp; Step-by-Step Blueprint&lt;/h2&gt;&#xA;&lt;p&gt;Author: Atul&lt;br&gt;&#xA;Version: 1.1&lt;br&gt;&#xA;Date: 2025-11-23&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;-overview&#34;&gt;📌 Overview&lt;/h1&gt;&#xA;&lt;p&gt;This document provides a &lt;strong&gt;complete, official, non-assumptive&lt;/strong&gt; blueprint for performing a &lt;strong&gt;SailPoint IdentityIQ → Microsoft Azure (Entra ID + Identity Governance)&lt;/strong&gt; migration.&lt;br&gt;&#xA;It contains:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What actually gets migrated&lt;/li&gt;&#xA;&lt;li&gt;Architecture diagrams&lt;/li&gt;&#xA;&lt;li&gt;Extraction → Transformation → Load phases&lt;/li&gt;&#xA;&lt;li&gt;REST vs SPConfig vs SCIM (differences &amp;amp; usage)&lt;/li&gt;&#xA;&lt;li&gt;Web-based Migration Platform Architecture&lt;/li&gt;&#xA;&lt;li&gt;POC plan using ASP.NET + SPConfig + REST&lt;/li&gt;&#xA;&lt;li&gt;Roadmap for the complete migration tool&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is the &lt;strong&gt;master overview document&lt;/strong&gt;.&lt;br&gt;&#xA;A detailed step-by-step migration guide will be created later during implementation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

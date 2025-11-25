@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SailPoint on Knowwvana Learn</title>
+    <link>https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/</link>
+    <description>Recent content in SailPoint on Knowwvana Learn</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/identityiq-docker-setup-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://knowwvana.github.io/knowwvana.learn/doc/home/sailpoint/identityiq-docker-setup-guide/</guid>
+      <description>&lt;h1 id=&#34;sailpoint-identityiq-84--docker-dev-environment-devdays-2025&#34;&gt;SailPoint IdentityIQ 8.4 – Docker Dev Environment (DevDays 2025)&lt;/h1&gt;&#xA;&lt;p&gt;This guide explains, &lt;strong&gt;step by step&lt;/strong&gt;, how to set up a &lt;strong&gt;local SailPoint IdentityIQ 8.4 development environment&lt;/strong&gt; using:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SailPoint Developer Days Docker reference:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;“Leveraging SailPoint IdentityIQ and Docker for seamless development” (Dev Days session)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;GitHub repo:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;iiq-docker-developer-days-2025&lt;/code&gt; (Yannick Beot – SailPoint)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Official IdentityIQ 8.4 distribution from SailPoint Compass&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The goal is that &lt;strong&gt;anyone&lt;/strong&gt; can follow this and get IdentityIQ running locally on Docker Desktop from scratch.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

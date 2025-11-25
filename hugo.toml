@@ -1,6 +1,7 @@
 baseURL = 'https://knowwvana.github.io/knowwvana.learn/'
 languageCode = 'en-us'
 title = 'Knowwvana Learn'
+publishDir = "docs"
 enableGitInfo = true
 
 [params]
